@@ -1,6 +1,4 @@
-Here's your README file formatted for GitHub:
 
-```markdown
 # Llama-2-7b-chat-finetune
 
 This project focuses on fine-tuning the Llama-2-7b model for chat applications, using Amazon SageMaker FAQ dataset. The fine-tuning process leverages several modern techniques and libraries, including LoRA (Low-Rank Adaptation), 4-bit quantization, and the Hugging Face Transformers library.
