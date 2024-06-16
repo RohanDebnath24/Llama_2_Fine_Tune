@@ -1,12 +1,12 @@
-
 # Llama-2-7b-chat-finetune
 
-This project focuses on fine-tuning the Llama-2-7b model for chat applications, using Amazon SageMaker FAQ dataset. The fine-tuning process leverages several modern techniques and libraries, including LoRA (Low-Rank Adaptation), 4-bit quantization, and the Hugging Face Transformers library.
+This project focuses on fine-tuning the Llama-2-7b model for chat applications, using a custom dataset based on Amazon SageMaker FAQ. The fine-tuning process leverages several modern techniques and libraries, including LoRA (Low-Rank Adaptation), 4-bit quantization, and the Hugging Face Transformers library.
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Custom Dataset](#custom-dataset)
 - [Training Details](#training-details)
 - [Results](#results)
 - [Model Deployment](#model-deployment)
@@ -15,7 +15,7 @@ This project focuses on fine-tuning the Llama-2-7b model for chat applications, 
 
 ## Introduction
 
-The aim of this project is to fine-tune a pre-trained Llama-2-7b model for generating human-like responses to questions based on a custom dataset. The dataset used for training is the Amazon SageMaker FAQ dataset.
+The aim of this project is to fine-tune a pre-trained Llama-2-7b model for generating human-like responses to questions based on a custom dataset. The dataset used for training is derived from the Amazon SageMaker FAQ dataset, curated specifically for this project.
 
 ## Installation
 
@@ -27,7 +27,7 @@ To get started with this project, you need to install the required packages:
 
 ## Usage
 
-1. **Load and Prepare the Dataset**:
+1. **Load and Prepare the Custom Dataset**:
     ```python
     from datasets import load_dataset
     dataset_name = "Rohandebnath243536287/Amazon_Sagemaker_Faq_llama"
@@ -75,10 +75,14 @@ To get started with this project, you need to install the required packages:
     print(result[0]['generated_text'])
     ```
 
+## Custom Dataset
+
+This project uses a custom dataset derived from the Amazon SageMaker FAQ dataset, specifically curated for training the Llama-2-7b model. The dataset includes a collection of questions and corresponding answers, focusing on various aspects of Amazon SageMaker.
+
 ## Training Details
 
 - **Model**: Llama-2-7b
-- **Dataset**: Amazon SageMaker FAQ
+- **Dataset**: Custom Amazon SageMaker FAQ derivative
 - **Fine-tuning**: Utilizes LoRA for parameter-efficient fine-tuning
 - **Quantization**: 4-bit quantization to reduce model size and improve inference speed
 - **Training Epochs**: 1
@@ -117,4 +121,4 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 This project is licensed under the MIT License.
 ```
 
-Feel free to customize further as needed!
+Make sure to replace `"Rohandebnath243536287/Amazon_Sagemaker_Faq_llama"` with the appropriate dataset identifier you've used or plan to use on Hugging Face Datasets Hub. Adjust any other details or sections based on your specific project requirements.
